@@ -24,7 +24,6 @@ public class QuestionController {
     @GetMapping("/category/{category}")
     public ResponseEntity<List<Question>> getQuestionsByCategory(@PathVariable String category){
         return questionService.getAllQuestionsByCategory(category);
-
     }
 
     @PostMapping("/add")
@@ -36,7 +35,6 @@ public class QuestionController {
     public ResponseEntity<String> putQuestion(@PathVariable Integer id,
                               @RequestBody Question question){
          return questionService.putQuestion(id, question);
-        //return "Updated Successfully";
     }
 
     @DeleteMapping("/{id}")
